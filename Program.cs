@@ -17,21 +17,26 @@ string[] inputArray = new string[size];
 FillArrayHandler(inputArray);
 Console.Write("Исходный массив -> ");
 PrintArray(inputArray);
+string[] result = GetResultArray(inputArray);
+Console.Write("Результирующий массив -> ");
+PrintArray(result);
 
-
-void FillArrayHandler(string[] array) {
+void FillArrayHandler(string[] array)
+{
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Console.ReadLine()!;
     }
 }
 
-void PrintArray(string[] array) {
+void PrintArray(string[] array)
+{
     if (array.Length == 0) Console.Write("[]");
-    else {
+    else
+    {
         for (int i = 0; i < array.Length; i++)
         {
-            if (i == 0 && i == array.Length -1) Console.Write($"[{array[i]}]");
+            if (i == 0 && i == array.Length - 1) Console.Write($"[{array[i]}]");
             else if (i == 0) Console.Write($"[{array[i]}, ");
             else if (i == array.Length - 1) Console.Write($"{array[i]}]");
             else Console.Write($"{array[i]}, ");
@@ -40,7 +45,8 @@ void PrintArray(string[] array) {
     Console.WriteLine();
 }
 
-string[] GetResultArray(string[] array) {
+string[] GetResultArray(string[] array)
+{
     int count = 0;
     int index = 0;
 
@@ -51,7 +57,17 @@ string[] GetResultArray(string[] array) {
             count++;
         }
     }
-    
+
     string[] resultArray = new string[count];
 
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            resultArray[index] = array[i];
+            index++;
+        }
+    }
+
+    return resultArray;
 }
