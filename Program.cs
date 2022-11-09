@@ -15,10 +15,27 @@ Console.Write("Введите количество элементов: ");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] inputArray = new string[size];
 FillArrayHandler(inputArray);
+Console.Write("Исходный массив -> ");
+PrintArray(inputArray);
+
 
 void FillArrayHandler(string[] array) {
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Console.ReadLine()!;
     }
+}
+
+void PrintArray(string[] array) {
+    if (array.Length == 0) Console.Write("[]");
+    else {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i == 0 && i == array.Length -1) Console.Write($"[{array[i]}]");
+            else if (i == 0) Console.Write($"[{array[i]}, ");
+            else if (i == array.Length - 1) Console.Write($"{array[i]}]");
+            else Console.Write($"{array[i]}, ");
+        }
+    }
+    Console.WriteLine();
 }
