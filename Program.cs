@@ -11,8 +11,14 @@ Console.Clear();
 Console.WriteLine("------ Программа для формирования результирующего массива");
 Console.WriteLine("------ со строчными элементами, длина которых меньше или равна 3.");
 Console.WriteLine();
-Console.Write("------ со строчными элементами, длина которых меньше или равна 3.");
+Console.Write("Введите количество элементов: ");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] inputArray = new string[size];
+FillArrayHandler(inputArray);
 
-
+void FillArrayHandler(string[] array) {
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = Console.ReadLine()!;
+    }
+}
