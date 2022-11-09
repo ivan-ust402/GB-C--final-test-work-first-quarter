@@ -39,3 +39,8 @@ void PrintArray(string[] array) {
     }
     Console.WriteLine();
 }
+
+string[] GetResultArray(string[] array) {
+    int count = 0;
+    int index = 0;
+}
