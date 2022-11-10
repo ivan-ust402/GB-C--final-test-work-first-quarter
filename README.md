@@ -60,4 +60,4 @@
         indexInputArray = indexInputArray + 1
 
 
-    print(resultArray)`
+    print(resultArray)
