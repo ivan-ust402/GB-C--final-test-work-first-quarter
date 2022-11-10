@@ -37,27 +37,27 @@
 *Алгоритм, представленный в псевдокоде основной части программы, отвечающей за получение результирующего массива*
 
 
-> size = 5
-> inputArray = ["hello", "2", "world", ":-)"]
-> count = 0
-> indexInputArray = 0
-> indexResultArray = 0
+    size = 5
+    inputArray = ["hello", "2", "world", ":-)"]
+    count = 0
+    indexInputArray = 0
+    indexResultArray = 0
 
 
-> while (indexInputArray < size) do
->     if (inputArray[indexInputArray].Length <= 3)
->         count = count + 1
->     indexInputArray = indexInputArray + 1
+    while (indexInputArray < size) do
+        if (inputArray[indexInputArray].Length <= 3)
+            count = count + 1
+        indexInputArray = indexInputArray + 1
 
 
-> sizeResultArray = count
-> resultArray[sizeResultArray]
+    sizeResultArray = count
+    resultArray[sizeResultArray]
 
 
-> while (indexInputArray < size) do
->     if (inputArray[indexInputArray].Length <= 3)
->         resultArray[indexResultArray] = inputArray[indexInputArray]
->     indexInputArray = indexInputArray + 1
+    while (indexInputArray < size) do
+        if (inputArray[indexInputArray].Length <= 3)
+            resultArray[indexResultArray] = inputArray[indexInputArray]
+        indexInputArray = indexInputArray + 1
 
 
-> print(resultArray)
+    print(resultArray)`
