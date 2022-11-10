@@ -17,3 +17,37 @@
 > ["1234", "1567", "-2", "computer science"] -> ["-2"]
 
 > ["Russia", "Denmark", "Kazan"] -> [ ]
+
+**Алгоритм решения:**
+*Текстовый*
+1. Обработка входных данных пользователя: ввод размерности массива, и элементов массива
+2. Создание пустого входного массива на основе введенной пользователем размерности
+3. Заполнение элементов входного массива пользователем в цикле, количество итераций равно размерности массива
+4. Вывод на экран отформатированного входного массива.
+5. Перебор входного массива и нахождение количества элементов массива, у которых длина меньше или равна 3.
+6. Создание результирующего пустого массива на основе результата, полученного в пункте 5.
+7. Перебор входного массива и запись элементов по условию длина меньше или равна 3 в созданный в пункте 6 результирующий массив.
+8. Вывод на экран результирующего массива
+
+*Псевдокод основной части программы, отвечающей за получение результирующего массива*
+
+size = 5
+inputArray = ["hello", "2", "world", ":-)"]
+count = 0
+indexInputArray = 0
+indexResultArray = 0
+
+while (indexInputArray < size) do
+    if (inputArray[indexInputArray].Length <= 3)
+        count = count + 1
+    indexInputArray = indexInputArray + 1
+
+sizeResultArray = count
+resultArray[sizeResultArray]
+
+while (indexInputArray < size) do
+    if (inputArray[indexInputArray].Length <= 3)
+        resultArray[indexResultArray] = inputArray[indexInputArray]
+    indexInputArray = indexInputArray + 1
+
+print(resultArray)
